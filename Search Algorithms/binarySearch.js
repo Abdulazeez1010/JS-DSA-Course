@@ -48,3 +48,16 @@ function binarySearch(arr, val){
   // return -1 at the end
   return -1;
 }
+
+// Colt's Solution
+function binarySearch(arr, elem) {
+    var start = 0;
+    var end = arr.length - 1;
+    var middle = Math.floor((start + end) / 2)
+    while (arr !== middle && start <= end) {
+        if (elem < arr[middle]) end = middle - 1;
+        else start = middle + 1;
+        middle = Math.floor((start + end) / 2);
+    }
+    return arr[middle] === elem ? middle : -1;
+}
