@@ -24,7 +24,7 @@ function selectionSort(arr) {
         // initialise min with the current element
         let min = arr[i];
         let idx;
-        for (j = i + 1; j < arr.length; j++) {
+        for (let j = i + 1; j < arr.length; j++) {
             // update the minimum for each iteration
             if (arr[j] < min) {
                 min = arr[j]
